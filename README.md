@@ -16,3 +16,6 @@ This Java Selenium automation project extracts publication, grant, and filing da
 - Uses explicit/implicit waits instead of `Thread.sleep()` for better reliability.
 - Includes error handling with helpful console logs.
 - Modular, scalable, and commented code for easy maintenance.
+
+Output Image:
+<img width="696" height="475" alt="Screenshot 2025-07-19 220859" src="https://github.com/user-attachments/assets/60a8ceee-b1a8-46bb-bc84-ae4f4386ed66" />
