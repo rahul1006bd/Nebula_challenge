@@ -34,6 +34,12 @@ public class PatentDateDifference {
             // Navigate to site
             driver.get("https://patinformed.wipo.int/");
 
+            // Locate and fill the search box
+            WebElement searchField = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("//input[contains(@placeholder,'Search pharmaceutical patents')]")));
+            searchField.sendKeys(searchKey);
+
+
             // Handle dynamic popup
             try {
                 WebElement consentButton = wait.until(ExpectedConditions.elementToBeClickable(
@@ -44,10 +50,7 @@ public class PatentDateDifference {
                 System.out.println("Popup not found.");
             }
 
-            // Locate and fill the search box
-            WebElement searchField = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//input[contains(@placeholder,'Search pharmaceutical patents')]")));
-            searchField.sendKeys(searchKey);
+
 
             // Click search icon
             WebElement searchIcon = wait.until(ExpectedConditions.elementToBeClickable(
